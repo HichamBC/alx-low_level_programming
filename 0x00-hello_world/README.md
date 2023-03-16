@@ -1,1 +1,2 @@
-0x00-hello_world project task
+0-preprocessor file is a script that runs a C file through the preprocessor and save the result into another file.
+1-compiler file is a script that compiles a C file but does not link.

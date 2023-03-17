@@ -4,3 +4,4 @@
 4) 3-print_alphabets.c is a program that prints the alphabet in lowercase, and then in uppercase.
 5) 4-print_alphabt.c is a progarm that Print all the letters except q and e.
 6) 5-print_numbers.c is a program that prints all single digit numbers of base 10 starting from 0.
+7) 6-print_numberz.c is a program that prints all single digit numbers of base 10 starting from 0.

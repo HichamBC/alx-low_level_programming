@@ -9,3 +9,4 @@
 9) 8-print_base16.c is a program that prints all the numbers of base 16 in lowercase.
 10) 9-print_comb.c is a program that prints all possible combinations of single-digit numbers.
 11) 100-print_comb3.c is a program that prints all possible different combinations of two digits.
+12) 101-print_comb4.c is a program that prints all possible different combinations of three digits.

@@ -4,14 +4,16 @@
 /**
  * main - Entry Point
  *
- * Descirption: C program that prints a strint to the standard erroe.
+ * Descirption: program that prints a string to the standard error.
  *
  * Return: Always 1 to the standard error.
  */
 
-int main()
+int main(void)
 {
-    write(STDERR_FILENO,"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", strlen("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"));
+	char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-    return 1;
+	write(STDERR_FILENO, str, strlen(str));
+
+	return (1);
 }

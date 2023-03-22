@@ -1,15 +1,14 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * multiples_sum - Entry Point
+ * main - Entry Point
  *
  * Description: program prints the sum of the multiples of 3 or 5 below 1024.
  *
- * Return: None.
+ * Return: Always 0 (Success).
  */
 
-void multiples_sum(void)
+int main(void)
 {
 	int i;
 	int sum;
@@ -26,4 +25,6 @@ void multiples_sum(void)
 		i++;
 	}
 	printf("%d\n", sum);
+	
+	return (0);
 }

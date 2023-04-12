@@ -12,10 +12,10 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **matrix;
-	int rows;
-	int columns;
-	int i, j;
+	unsigned int **matrix;
+	unsigned int rows;
+	unsigned int columns;
+	unsigned int i, j;
 
 	if ((width <= 0) || (height <= 0))
 		return (NULL);
@@ -26,7 +26,6 @@ int **alloc_grid(int width, int height)
 
 	if (matrix == NULL)
 	{
-		free(matrix);
 		return (NULL);
 	}
 
@@ -35,7 +34,6 @@ int **alloc_grid(int width, int height)
 		matrix[i] = malloc(columns);
 		if (matrix[i] == NULL)
 		{
-			free(matrix[i]);
 			return (NULL);
 		}
 	}

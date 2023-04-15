@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	long int a = 1, b = 2, c;
+	long int a = 1, b = 2, c = 0;
 	long int sum = 2;
 
 	while (c <= 4000000)
@@ -23,6 +23,7 @@ int main(void)
 			sum += c;
 		}
 	}
+
 	printf("%ld\n", sum);
 	return (0);
 }

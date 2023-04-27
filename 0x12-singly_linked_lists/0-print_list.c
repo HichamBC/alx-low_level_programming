@@ -15,7 +15,7 @@ size_t print_list(const list_t *h)
 	list_t *ph = NULL;
 
 	if (h == NULL)
-		exit();
+		return (0);
 
 	ph = (list_t *)h;
 

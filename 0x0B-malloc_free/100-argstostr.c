@@ -36,8 +36,11 @@ char *argstostr(int ac, char **av)
 			*(str + pos) = av[i][j];
 			pos++;
 		}
-		*(str + pos) = '\n';
-		pos++;
+		if (i != (ac - 1))
+		{
+			*(str + pos) = '\n';
+			pos++;
+		}
 	}
 	*(str + pos) = '\0';
 

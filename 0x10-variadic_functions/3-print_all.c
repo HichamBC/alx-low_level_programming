@@ -58,11 +58,9 @@ void print_string(va_list arg)
 	if (s == NULL)
 	{
 		printf("(nil)");
+		return;
 	}
-	else
-	{
-		printf("%s", s);
-	}
+	printf("%s", s);
 }
 
 /**
@@ -76,7 +74,6 @@ void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i, j;
-	char c;
 
 	fmt_t formats[] = {
 		{'c', print_char},
@@ -90,11 +87,10 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format && format[i])
 	{
-		c = format[i];
 		j = 0;
 		while (j < 4)
 		{
-			if (formats[j].type == c)
+			if (format[i] == formats[j].type)
 			{
 				formats[j].print(args);
 				if (format[i + 1])

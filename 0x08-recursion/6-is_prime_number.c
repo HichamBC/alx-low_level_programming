@@ -1,4 +1,4 @@
-#incluse "main.h"
+#include "main.h"
 
 /**
  * is_divisable - sees if n is divisable by any number between m and 1.

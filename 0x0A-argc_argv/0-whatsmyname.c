@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - entry point
@@ -11,6 +12,13 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	char *name = argv[0];
+
+	while (*name != '\0')
+	{
+		_putchar(*name);
+		name++;
+	}
+	_putchar('\n');
 	return (0);
 }

@@ -2,6 +2,10 @@
 #include "main.h"
 
 /**
+ * _strdup - allocates a space in memory which contains a copy of a string.
+ * @str: string.
+ *
+ * Return: returns a pointer to the duplicated string or NULL.
  */
 
 char *_strdup(char *str)

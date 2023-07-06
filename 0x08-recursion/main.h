@@ -11,5 +11,8 @@ int find_sqrt(int n, int m);
 int _sqrt_recursion(int n);
 int is_divisible(int n, int m);
 int is_prime_number(int n);
+int scan_str(char *str, int i, int j);
+int str_len(char *str);
+int is_palindrome(char *s);
 
 #endif

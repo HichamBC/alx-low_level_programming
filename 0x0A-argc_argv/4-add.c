@@ -30,8 +30,8 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 		if (num < 0)
-			continue;
-		
+			return (1);
+
 		sum += num;
 	}
 	printf("%d\n", sum);

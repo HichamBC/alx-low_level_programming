@@ -22,6 +22,12 @@ int main(int argc, char *argv[])
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);
+
+	if (num1 == 0 && argv[1][0] != '0')
+		return (1);
+	if (num2 == 0 && argv[2][0] != '0')
+		return (1);
+
 	printf("%d\n", num1 * num2);
 
 	return (0);

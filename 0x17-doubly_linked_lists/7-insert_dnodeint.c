@@ -2,34 +2,6 @@
 #include "lists.h"
 
 /**
- * insert_between_nodes - Inserts a new node with a given value between two
- *                        existing nodes in a doubly linked list.
- * @h: A pointer to a pointer to the head of the doubly linked list.
- * @ptr: A pointer to the node after which to insert the new node.
- * @n: The integer value to be stored in the new node.
- *
- * Return: pointer to the head of doubly linked list after insertion or NULL.
- */
-
-dlistint_t *insert_between_nodes(dlistint_t **h, dlistint_t *ptr, const int n)
-{
-	dlistint_t *new_node, *temp;
-
-	new_node = malloc(sizeof(dlistint_t));
-	if (new_node == NULL)
-		return (NULL);
-
-	temp = ptr->prev;
-	temp->next = new_node;
-	ptr->prev = new_node;
-	new_node->next = ptr;
-	new_node->prev = temp;
-	new_node->n = n;
-
-	return (new_node);
-}
-
-/**
  * insert_dnodeint_at_index - Inserts a new node with a given value at a
  *                             specified index in a doubly linked list.
  * @h: A pointer to a pointer to the head of the doubly linked list.
@@ -41,7 +13,7 @@ dlistint_t *insert_between_nodes(dlistint_t **h, dlistint_t *ptr, const int n)
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t  *p1;
+	dlistint_t  *temp, *p1, *p2;
 	size_t node = 0;
 
 	if (idx == 0)
@@ -56,7 +28,18 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		else if (node == idx && idx > 0)
 		{
-			return (insert_between_nodes(h, p1, n));
+			temp = malloc(sizeof(dlistint_t));
+			if (temp == NULL)
+				return (NULL);
+
+			p2 = p1->prev;
+			p2->next = temp;
+			p1->prev = temp;
+			temp->next = p1;
+			temp->prev = p2;
+			temp->n = n;
+
+			return (temp);
 		}
 
 		p1 = p1->next;

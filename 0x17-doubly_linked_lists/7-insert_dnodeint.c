@@ -26,7 +26,7 @@ dlistint_t *insert_between_nodes(dlistint_t **h, dlistint_t *ptr, const int n)
 	new_node->prev = temp;
 	new_node->n = n;
 
-	return (*h);
+	return (new_node);
 }
 
 /**
@@ -44,14 +44,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t  *p1;
 	size_t node = 0;
 
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+
 	p1 = *h;
 	while (p1 != NULL)
 	{
-		if (node == idx && idx == 0)
-		{
-			return (add_dnodeint(h, n));
-		}
-		else if (p1->next == NULL && idx >= node + 1)
+		if (p1->next == NULL && idx == node + 1)
 		{
 			return (add_dnodeint_end(h, n));
 		}
@@ -64,5 +63,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		node++;
 	}
 
-	return (add_dnodeint(h, n));
+	return (NULL);
 }

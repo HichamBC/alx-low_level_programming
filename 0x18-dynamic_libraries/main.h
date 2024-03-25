@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
 #include <stdlib.h>
 
 int _putchar(char c);
@@ -23,5 +24,11 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
+
+int add(int i, int j);
+int sub(int i, int j);
+int mul(int i, int j);
+int mod(int i, int j);
+
 
 #endif
